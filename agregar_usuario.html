@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inverspot | Panel de Administrador</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/core.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/ui/fullcalendar/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+	<script type="text/javascript" src="assets/js/pages/user_pages_profile.js"></script>
+	<!-- /theme JS files -->
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-inverse bg-purple-600">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+
+			<ul class="nav navbar-nav visible-xs-block">
+				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+				<li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="navbar-collapse collapse" id="navbar-mobile">
+			<ul class="nav navbar-nav">
+				<li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+			</ul>
+
+			<p class="navbar-text"><span class="label bg-success">Online</span></p>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown dropdown-user">
+					<a class="dropdown-toggle" data-toggle="dropdown">
+						<img src="assets/images/placeholder.jpg" alt="">
+						<span>Victoria</span>
+						<i class="caret"></i>
+					</a>
+
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#"><i class="icon-user-plus"></i> Mi Perfil</a></li>
+						<li class="divider"></li>
+						<li><a href="#"><i class="icon-cog5"></i> Configuración</a></li>
+						<li><a href="#"><i class="icon-switch2"></i> Salir</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page container -->
+	<div class="page-container">
+
+		<!-- Page content -->
+		<div class="page-content">
+
+			<!-- Main sidebar -->
+			<div class="sidebar sidebar-main">
+				<div class="sidebar-content">
+
+					<!-- User menu -->
+					<div class="sidebar-user">
+						<div class="category-content">
+							<div class="media">
+								<a href="#" class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
+								<div class="media-body">
+									<span class="media-heading text-semibold">Victoria Baker</span>
+									<div class="text-size-mini text-muted">
+										<i class="icon-user text-size-small"></i> &nbsp;Admin
+									</div>
+								</div>
+
+								<div class="media-right media-middle">
+									<ul class="icons-list">
+										<li>
+											<a href="#"><i class="icon-cog3"></i></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /user menu -->
+
+
+					<!-- Main navigation -->
+					<div class="sidebar-category sidebar-category-visible">
+						<div class="category-content no-padding">
+							<ul class="navigation navigation-main navigation-accordion">
+
+								<!-- Main -->
+								<li class="navigation-header"><span>Panel Principal</span> <i class="icon-menu" title="Main pages"></i></li>
+								<li><a href="index.html"><i class="icon-home4"></i> <span>Inicio</span></a></li>
+								<li>
+									<a href="#"><i class="icon-stack2"></i> <span>Administradores</span></a>
+									<ul>
+										<li><a href="admins.html">Todos los Administradores</a></li>
+										<li><a href="agregar_admin.html">Añadir un Administrador</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><i class="icon-copy"></i> <span>Propiedades</span></a>
+									<ul>
+										<li><a href="propiedades.html">Todas las Propiedades</a></li>
+										<li><a href="agregar_propiedad.html">Añadir Nueva Propiedad<span class="label bg-warning-400">13</span></a></li>
+									</ul>
+								</li>
+								<li class="active">
+									<a href="#"><i class="icon-droplet2"></i> <span>Usuarios</span></a>
+									<ul>
+										<li><a href="usuarios.html">Todos los Usuarios</a></li>
+										<li class="active"><a href="agregar_usuario.html">Añadir Nuevo Usuario</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><i class="icon-stack"></i> <span>Inversores</span></a>
+									<ul>
+										<li><a href="inversores.html">Todos los Inversores</a></li>
+										<li><a href="#">Añadir Nueva Inversion</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><i class="icon-pencil3"></i> <span>Asesores</span></a>
+									<ul>
+										<li><a href="asesores.html">Todos los Asesores</a></li>
+										<li><a href="agregar_asesor.html">Añadir Nuevo Asesor</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><i class="icon-file-css"></i> <span>Desarrolladores</span></a>
+									<ul>
+										<li><a href="desarrolladores.html">Todos los Desarrolladores</a></li>
+										<li><a href="#">Añadir Nuevo Desarrollador</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="newsletter.html"><i class="icon-sphere"></i> <span>Newsletter</span></a>
+								</li>
+								<!-- /Main -->
+
+							</ul>
+						</div>
+					</div>
+					<!-- /main navigation -->
+
+				</div>
+			</div>
+			<!-- /main sidebar -->
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+
+
+				<!-- Page header -->
+				<div class="page-header page-header-default">
+					<div class="breadcrumb-line">
+						<ul class="breadcrumb">
+							<li><a href="index.html"><i class="icon-home2 position-left"></i> Panel Principal</a></li>
+							<li class="active">Agregar Nuevo Usuario</li>
+						</ul>
+
+						<ul class="breadcrumb-elements">
+							<li><a href="#"><i class="icon-comment-discussion position-left"></i> Ayuda</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="icon-gear position-left"></i>
+									Opciones
+									<span class="caret"></span>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
+									<li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
+									<li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /page header -->
+
+
+
+				<!-- Toolbar -->
+				<div class="navbar navbar-default navbar-xs content-group">
+					<ul class="nav navbar-nav visible-xs-block">
+						<li class="full-width text-center"><a data-toggle="collapse" data-target="#navbar-filter"><i class="icon-menu7"></i></a></li>
+					</ul>
+
+					<div class="navbar-collapse collapse" id="navbar-filter">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#settings" data-toggle="tab"><i class="icon-cog3 position-left"></i> Opciones</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /toolbar -->
+
+
+				<!-- Content area -->
+				<div class="content">
+
+					<!-- User profile -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="tabbable">
+								<div class="tab-content">
+									<div class="tab-pane fade in active" id="settings">
+
+										<!-- Profile info -->
+										<div class="panel panel-flat">
+											<div class="panel-heading">
+												<h6 class="panel-title">Información de Perfil</h6>
+											</div>
+
+											<div class="panel-body">
+												<form action="#">
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-12">
+																<label>Nombre Completo</label>
+																<input type="text" value="" class="form-control">
+															</div>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-6">
+																<label>Correo electrónico (obligatorio)	</label>
+																<input type="text" value="" class="form-control">
+															</div>
+															<div class="col-md-6">
+									                            <label>Estado</label>
+									                            <select class="select">
+									                                <option value="germany" selected="selected">Germany</option> 
+									                                <option value="france">France</option> 
+									                                <option value="spain">Spain</option> 
+									                                <option value="netherlands">Netherlands</option> 
+									                                <option value="other">...</option> 
+									                                <option value="uk">United Kingdom</option> 
+									                            </select>
+															</div>
+														</div>
+													</div>
+
+							                        <div class="form-group">
+							                        	<div class="row">
+							                        		<div class="col-md-6">
+																<label>Teléfono #</label>
+																<input type="text" value="" class="form-control">
+																<span class="help-block">999-999-99-99</span>
+							                        		</div>
+
+															<div class="col-md-6">
+																<label class="display-block">Subir Imagen de Perfil</label>
+							                                    <input type="file" class="file-styled">
+							                                    <span class="help-block">Formatos aceptados: gif, png, jpg. Tamaño Max: 2Mb</span>
+															</div>
+							                        	</div>
+							                        </div>
+
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-12">
+																<label>Nombre de usuario (obligatorio)</label>
+																<input type="text" value="" class="form-control">
+															</div>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-6">
+																<label>Contraseña</label>
+																<input type="password" placeholder="" class="form-control">
+															</div>
+
+															<div class="col-md-6">
+																<label>Repetir Contraseña</label>
+																<input type="password" placeholder="" class="form-control">
+															</div>
+														</div>
+													</div>
+                                                
+							                        <div class="text-right">
+							                        	<button type="submit" class="btn btn-primary">Crear Usuario <i class="icon-arrow-right14 position-right"></i></button>
+							                        </div>
+												</form>
+											</div>
+										</div>
+										<!-- /profile info -->
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+					</div>
+					<!-- /user profile -->
+
+
+
+					<!-- Footer -->
+					<div class="footer text-muted">
+						&copy; 2017. <a href="#">Inverspot.</a> Powered by <a href="#" target="_blank">Cuántico</a>
+					</div>
+					<!-- /footer -->
+
+
+				</div>
+				<!-- /content area -->
+
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+	</div>
+	<!-- /page container -->
+
+</body>
+</html>

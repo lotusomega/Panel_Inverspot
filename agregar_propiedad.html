@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inverspot | Panel de Administrador</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/core.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="assets/js/plugins/forms/validation/validate.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/inputs/touchspin.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/styling/switch.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+	<script type="text/javascript" src="assets/js/pages/form_validation.js"></script>
+	<!-- /theme JS files -->
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-inverse bg-purple-600">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+
+			<ul class="nav navbar-nav visible-xs-block">
+				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+				<li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="navbar-collapse collapse" id="navbar-mobile">
+			<ul class="nav navbar-nav">
+				<li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+			</ul>
+
+			<p class="navbar-text"><span class="label bg-success">Online</span></p>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown dropdown-user">
+					<a class="dropdown-toggle" data-toggle="dropdown">
+						<img src="assets/images/placeholder.jpg" alt="">
+						<span>Victoria</span>
+						<i class="caret"></i>
+					</a>
+
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#"><i class="icon-user-plus"></i> Mi Perfil</a></li>
+						<li class="divider"></li>
+						<li><a href="#"><i class="icon-cog5"></i> Configuración</a></li>
+						<li><a href="#"><i class="icon-switch2"></i> Salir</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page container -->
+	<div class="page-container">
+
+		<!-- Page content -->
+		<div class="page-content">
+
+			<!-- Main sidebar -->
+			<div class="sidebar sidebar-main">
+				<div class="sidebar-content">
+
+					<!-- User menu -->
+					<div class="sidebar-user">
+						<div class="category-content">
+							<div class="media">
+								<a href="#" class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
+								<div class="media-body">
+									<span class="media-heading text-semibold">Victoria Baker</span>
+									<div class="text-size-mini text-muted">
+										<i class="icon-user text-size-small"></i> &nbsp;Admin
+									</div>
+								</div>
+
+								<div class="media-right media-middle">
+									<ul class="icons-list">
+										<li>
+											<a href="#"><i class="icon-cog3"></i></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /user menu -->
+
+
+					<!-- Main navigation -->
+					<div class="sidebar-category sidebar-category-visible">
+						<div class="category-content no-padding">
+							<ul class="navigation navigation-main navigation-accordion">
+
+								<!-- Main -->
+								<li class="navigation-header"><span>Panel Principal</span> <i class="icon-menu" title="Main pages"></i></li>
+								<li><a href="index.html"><i class="icon-home4"></i> <span>Inicio</span></a></li>
+								<li>
+									<a href="#"><i class="icon-stack2"></i> <span>Administradores</span></a>
+									<ul>
+										<li><a href="admins.html">Todos los Administradores</a></li>
+										<li><a href="agregar_admin.html">Añadir un Administrador</a></li>
+									</ul>
+								</li>
+								<li class="active">
+									<a href="#"><i class="icon-copy"></i> <span>Propiedades</span></a>
+									<ul>
+										<li><a href="propiedades.html">Todas las Propiedades</a></li>
+										<li class="active"><a href="agregar_propiedad.html">Añadir Nueva Propiedad</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><i class="icon-droplet2"></i> <span>Usuarios</span></a>
+									<ul>
+										<li><a href="usuarios.html">Todos los Usuarios</a></li>
+										<li><a href="agregar_usuario.html">Añadir Nuevo Usuario</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><i class="icon-stack"></i> <span>Inversores</span></a>
+									<ul>
+										<li><a href="inversores.html">Todos los Inversores</a></li>
+										<li><a href="">Añadir Nueva Inversion</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><i class="icon-pencil3"></i> <span>Asesores</span></a>
+									<ul>
+										<li><a href="asesores.html">Todos los Asesores</a></li>
+										<li><a href="agregar_asesor.html">Añadir Nuevo Asesor</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><i class="icon-file-css"></i> <span>Desarrolladores</span></a>
+									<ul>
+										<li><a href="desarrolladores.html">Todos los Desarrolladores</a></li>
+										<li><a href="#">Añadir Nuevo Desarrollador</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="newsletter.html"><i class="icon-sphere"></i> <span>Newsletter</span></a>
+								</li>
+								<!-- /Main -->
+
+							</ul>
+						</div>
+					</div>
+					<!-- /main navigation -->
+
+				</div>
+			</div>
+			<!-- /main sidebar -->
+
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+
+				<!-- Page header -->
+				<div class="page-header page-header-default">
+					<div class="breadcrumb-line">
+						<ul class="breadcrumb">
+							<li><a href="index.html"><i class="icon-home2 position-left"></i> Panel Principal</a></li>
+							<li class="active">Agregar Nueva Propiedad</li>
+						</ul>
+
+						<ul class="breadcrumb-elements">
+							<li><a href="#"><i class="icon-comment-discussion position-left"></i> Ayuda</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="icon-gear position-left"></i>
+									Opciones
+									<span class="caret"></span>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
+									<li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
+									<li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /page header -->
+
+
+				<!-- Content area -->
+				<div class="content">
+
+					<!-- Form validation -->
+					<div class="panel panel-flat">
+						<div class="panel-heading">
+							<h5 class="panel-title">Información de Propiedad</h5>
+						</div>
+
+						<div class="panel-body">
+							<form class="form-horizontal form-validate-jquery" action="#">
+								<fieldset class="content-group">
+								    <!-- Informacion básica -->
+									<legend class="text-bold">Información Básica</legend>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Nombre <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Direción <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Colonia <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+
+									<div class="form-group has-feedback">
+										<label class="control-label col-lg-3">Coordenadas en el Mapa <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="with_icon" class="form-control" required="required" placeholder="ejemplo: 19.4236788,-99.1741247">
+											<div class="form-control-feedback">
+												<i class="icon-pin"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-lg-3">Tipo de proyecto <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<select name="default_select" class="form-control" required="required">
+												<option value="">Elige</option> 
+												<option value="casa">Casa</option>
+												<option value="departamento">Departamento</option>
+												<option value="comercial">Locales Comerciales</option>
+												<option value="oficinas">Oficinas</option>
+												<option value="terreno">Terreno</option>
+											</select>
+										</div>
+									</div>
+                                    
+									<div class="form-group">
+										<label class="control-label col-lg-3">Descripción del Proyecto <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<textarea rows="5" cols="5" name="textarea" class="form-control" required="required" placeholder=""></textarea>
+										</div>
+									</div>
+                                    
+									<div class="form-group">
+										<label class="control-label col-lg-3">Imagen Principal del Proyecto <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="file" name="styled_file" class="file-styled"  multiple="multiple" required="required">
+										</div>
+									</div>
+
+                                    <!-- Porcentajes -->
+									<legend class="text-bold">Porcentajes del Proyecto</legend>									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Costo Total <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Costo por Inversión <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+                                    </div>
+
+									<div class="form-group">
+										<label class="control-label col-lg-3">Total de Acciones <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Acciones Vendidas <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" value="0" required="required" placeholder="">
+										</div>
+									</div>
+
+
+                                    <!-- Objetivo, Rendimiento y Utilidad -->
+									<legend class="text-bold">Objetivo, Rendimiento y Utilidad</legend>									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Objetivo de Captación <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Rendimiento Anual Estimado <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-lg-3">Monto a Invertir <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Forma de Pago <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<label class="checkbox-inline">
+												<input type="checkbox" name="basic_inline_checkbox" required="required">
+												Mensualidades
+											</label>
+
+											<label class="checkbox-inline">
+												<input type="checkbox" name="basic_inline_checkbox">
+												Contado
+											</label>
+										</div>
+									</div>
+								
+									<div class="form-group">
+										<label class="control-label col-lg-3">Plazo Estimado en Meses <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Rendimiento en 18 Meses <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
+											</div>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Rendimiento Anualizado <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
+											</div>
+										</div>
+									</div>
+								
+                                    <!-- Datos Extra -->
+									<legend class="text-bold">Datos Complementarios</legend>			
+                                    <div class="row clearfix">
+                                        <div class="col-md-12 column">
+                                            <table class="table table-bordered table-hover" id="tab_logic">
+                                                <thead>
+                                                    <tr >
+                                                        <th class="text-center">
+                                                            Costo por Departamento
+                                                        </th>
+                                                        <th class="text-center">
+                                                            Precio Estimado de Venta
+                                                        </th>
+                                                        <th class="text-center">
+                                                            Comisión de Venta
+                                                        </th>
+                                                        <th class="text-center">
+                                                            Utilidad
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr id='addr0'>
+                                                        <td>
+                                                        <input type="text" name='costdept'  placeholder='' class="form-control"/>
+                                                        </td>
+                                                        <td>
+                                                        <input type="text" name='sellprice'  placeholder='' class="form-control"/>
+                                                        </td>
+                                                        <td>
+                                                        <input type="text" name='commissionsell' placeholder='' class="form-control"/>
+                                                        </td>
+                                                        <td>
+                                                        <input type="text" name='utility' placeholder='' class="form-control"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr id='addr1'></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div><br>
+                                    <a id="add_row" class="btn btn-default pull-left">Agregar Celda</a><a id='delete_row' class="pull-right btn btn-default">Eliminar Celda</a>
+									
+
+								</fieldset>
+
+								<div class="text-right">
+									<button type="reset" class="btn btn-default" id="reset">Limpiar <i class="icon-reload-alt position-right"></i></button>
+									<button type="submit" class="btn btn-primary">Crear Propiedad <i class="icon-arrow-right14 position-right"></i></button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- /form validation -->
+
+
+					<!-- Footer -->
+					<div class="footer text-muted">
+						&copy; 2015. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+					</div>
+					<!-- /footer -->
+
+				</div>
+				<!-- /content area -->
+
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+	</div>
+	<!-- /page container -->
+	
+    <script>
+        $(document).ready(function(){
+              var i=1;
+             $("#add_row").click(function(){
+              $('#addr'+i).html("<td><input name='costdept"+i+"' type='text' placeholder='' class='form-control input-md'  /> </td><td><input name='sellprice"+i+"' type='text' placeholder='' class='form-control input-md'  /> </td><td><input  name='commissionsell"+i+"' type='text' placeholder=''  class='form-control input-md'></td><td><input  name='utility"+i+"' type='text' placeholder=''  class='form-control input-md'></td>");
+
+              $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+              i++; 
+          });
+             $("#delete_row").click(function(){
+                 if(i>1){
+                 $("#addr"+(i-1)).html('');
+                 i--;
+                 }
+             });
+
+        });
+    </script>
+</body>
+</html>
