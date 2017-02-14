@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+	<title>Inverspot | Panel de Administrador</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -30,16 +30,37 @@
 	<script type="text/javascript" src="assets/js/plugins/forms/styling/switch.min.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/uploaders/fileinput.min.js"></script>
-
-
-	
-	
 
 	<script type="text/javascript" src="assets/js/core/app.js"></script>
 	<script type="text/javascript" src="assets/js/pages/form_validation.js"></script>
-	<script type="text/javascript" src="assets/js/pages/uploader_bootstrap.js"></script>
-	<!-- /theme JS files -->
+
+	<script type="text/javascript" src="assets/js/plugins/notifications/jgrowl.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/anytime.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/legacy.js"></script>
+
+
+	<script type="text/javascript" src="assets/js/pages/picker_date.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/tables/handsontable/tabular-input.js"></script>
+	
+	
+        <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
+
+		<!-- Requirement: Bootstrap -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+		<!-- Table editor -->
+		<link rel="stylesheet" href="src/bootstrap.table-editor.css">
+		<script src="src/bootstrap.table-editor.js"></script>
+
+	<!-- /theme JS files -->    
+    
 
 </head>
 
@@ -137,7 +158,7 @@
 									<a href="#"><i class="icon-copy"></i> <span>Propiedades</span></a>
 									<ul>
 										<li><a href="propiedades.html">Todas las Propiedades</a></li>
-										<li><a href="agregar_propiedad.html">Añadir Nueva Propiedad</a></li>
+										<li class="active"><a href="agregar_propiedad.html">Añadir Nueva Propiedad</a></li>
 									</ul>
 								</li>
 								<li>
@@ -151,7 +172,7 @@
 									<a href="#"><i class="icon-stack"></i> <span>Inversores</span></a>
 									<ul>
 										<li><a href="inversores.html">Todos los Inversores</a></li>
-										<li><a href="#">Añadir Nueva Inversion</a></li>
+										<li><a href="agregar_inversor.html">Añadir Nueva Inversion</a></li>
 									</ul>
 								</li>
 								<li>
@@ -206,713 +227,280 @@
 				</div>
 				<!-- /page header -->
 
-				<!-- Toolbar -->
-				<div class="navbar navbar-default navbar-xs content-group">
-					<ul class="nav navbar-nav visible-xs-block">
-						<li class="full-width text-center"><a data-toggle="collapse" data-target="#navbar-filter"><i class="icon-menu7"></i></a></li>
-					</ul>
-
-					<div class="navbar-collapse collapse" id="navbar-filter">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="#edit" data-toggle="tab"><i class="icon-cog3 position-left"></i> Editar Propiedad</a></li>
-							<li><a href="#gallery" data-toggle="tab"><i class="icon-images2 position-left"></i> Avances de Obra</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- /toolbar -->
-                
-
-                
 
 				<!-- Content area -->
 				<div class="content">
 
-					<!-- User profile -->
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="tabbable">
-								<div class="tab-content">
-									<div class="tab-pane fade in active" id="edit">
+					<!-- Form validation -->
+					<div class="panel panel-flat">
+						<div class="panel-heading">
+							<h5 class="panel-title">Información de Propiedad</h5>
+						</div>
 
-                                        <!-- Edit -->
-                                        <div class="panel panel-flat">
-                                            <div class="panel-heading">
-                                                <h5 class="panel-title">Editar Propiedad</h5>
-                                            </div>
-
-                                            <div class="panel-body">
-                                                <form class="form-horizontal form-validate-jquery" action="#">
-                                                    <fieldset class="content-group">
-                                                        <!-- Informacion básica -->
-                                                        <legend class="text-bold">Información Básica</legend>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Nombre <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="basic" class="form-control" required="required" placeholder="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Direción <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="basic" class="form-control" required="required" placeholder="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Colonia <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="basic" class="form-control" required="required" placeholder="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group has-feedback">
-                                                            <label class="control-label col-lg-3">Coordenadas en el Mapa <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="with_icon" class="form-control" required="required" placeholder="ejemplo: 19.4236788,-99.1741247">
-                                                                <div class="form-control-feedback">
-                                                                    <i class="icon-pin"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Tipo de proyecto <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <select name="default_select" class="form-control" required="required">
-                                                                    <option value="">Elige</option> 
-                                                                    <option value="casa">Casa</option>
-                                                                    <option value="departamento">Departamento</option>
-                                                                    <option value="comercial">Locales Comerciales</option>
-                                                                    <option value="oficinas">Oficinas</option>
-                                                                    <option value="terreno">Terreno</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Descripción del Proyecto <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <textarea rows="5" cols="5" name="textarea" class="form-control" required="required" placeholder=""></textarea>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Imagen Principal del Proyecto <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="file" name="styled_file" class="file-styled"  multiple="multiple" required="required">
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Porcentajes -->
-                                                        <legend class="text-bold">Porcentajes del Proyecto</legend>									
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Costo Total <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="digits" class="form-control" required="required" placeholder="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Costo por Inversión <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="digits" class="form-control" required="required" placeholder="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Total de Acciones <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="digits" class="form-control" required="required" placeholder="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Acciones Vendidas <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="digits" class="form-control" value="0" required="required" placeholder="">
-                                                            </div>
-                                                        </div>
-
-
-                                                        <!-- Objetivo, Rendimiento y Utilidad -->
-                                                        <legend class="text-bold">Objetivo, Rendimiento y Utilidad</legend>									
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Objetivo de Captación <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="digits" class="form-control" required="required" placeholder="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Rendimiento Anual Estimado <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <div class="input-group">
-                                                                    <input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Monto a Invertir <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="digits" class="form-control" required="required" placeholder="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Forma de Pago <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <label class="checkbox-inline">
-                                                                    <input type="checkbox" name="basic_inline_checkbox" required="required">
-                                                                    Mensualidades
-                                                                </label>
-
-                                                                <label class="checkbox-inline">
-                                                                    <input type="checkbox" name="basic_inline_checkbox">
-                                                                    Contado
-                                                                </label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Plazo Estimado en Meses <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <input type="text" name="digits" class="form-control" required="required" placeholder="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Rendimiento en 18 Meses <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <div class="input-group">
-                                                                    <input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-3">Rendimiento Anualizado <span class="text-danger">*</span></label>
-                                                            <div class="col-lg-9">
-                                                                <div class="input-group">
-                                                                    <input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Datos Extra -->
-                                                        <legend class="text-bold">Datos Complementarios</legend>			
-                                                        <div class="row clearfix">
-                                                            <div class="col-md-12 column">
-                                                                <table class="table table-bordered table-hover" id="tab_logic">
-                                                                    <thead>
-                                                                        <tr >
-                                                                            <th class="text-center">
-                                                                                Costo por Departamento
-                                                                            </th>
-                                                                            <th class="text-center">
-                                                                                Precio Estimado de Venta
-                                                                            </th>
-                                                                            <th class="text-center">
-                                                                                Comisión de Venta
-                                                                            </th>
-                                                                            <th class="text-center">
-                                                                                Utilidad
-                                                                            </th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr id='addr0'>
-                                                                            <td>
-                                                                            <input type="text" name='costdept'  placeholder='' class="form-control"/>
-                                                                            </td>
-                                                                            <td>
-                                                                            <input type="text" name='sellprice'  placeholder='' class="form-control"/>
-                                                                            </td>
-                                                                            <td>
-                                                                            <input type="text" name='commissionsell' placeholder='' class="form-control"/>
-                                                                            </td>
-                                                                            <td>
-                                                                            <input type="text" name='utility' placeholder='' class="form-control"/>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr id='addr1'></tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div><br>
-                                                        <a id="add_row" class="btn btn-default pull-left">Agregar Celda</a><a id='delete_row' class="pull-right btn btn-default">Eliminar Celda</a>
-
-
-                                                    </fieldset>
-
-                                                    <div class="text-right">
-                                                        <button type="submit" class="btn btn-primary">Editar Propiedad <i class="icon-arrow-right14 position-right"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <!-- /form validation -->
-
-
-                                        
-                                        
+						<div class="panel-body">
+							<form class="form-horizontal form-validate-jquery" action="#">
+								<fieldset class="content-group">
+								    <!-- Informacion básica -->
+									<legend class="text-bold">Información Básica</legend>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Título <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+                                    <div class="form-group">
+										<label class="control-label col-lg-3">Descripción del Proyecto <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<textarea rows="5" cols="5" name="textarea" class="form-control" required="required" placeholder="" aria-required="true"></textarea>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Imagen Principal del Proyecto <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="file" name="styled_file" class="file-styled"  multiple="multiple" required="required">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Calle <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Número <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Colonia <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Ciudad <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Código Postal <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="control-label col-lg-3">Coordenadas en el Mapa <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="with_icon" class="form-control" required="required" placeholder="ejemplo: 19.4236788,-99.1741247">
+											<div class="form-control-feedback">
+												<i class="icon-pin"></i>
+											</div>
+										</div>
+									</div>
+                                    <div class="form-group">
+                                         <label class="control-label col-lg-3">Elegir el Desarrollador <span class="text-danger">*</span></label>
+                                         <div class="col-lg-9">
+                                             <select class="selectpicker" data-show-subtext="true" data-live-search="true" required="required">
+                                               <option data-subtext="Rep California">Tom Foolery</option>
+                                               <option data-subtext="Sen California">Bill Gordon</option>
+                                               <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                               <option data-subtext="Rep Alabama">Mario Flores</option>
+                                               <option data-subtext="Rep Alaska">Don Young</option>
+                                               <option data-subtext="Rep California" disabled="disabled">Marvin Martinez</option>
+                                             </select>
+										 </div>
+                                     </div>
+									
+									
+									
+									<!-- Fichas Tecnicas -->
+									<legend class="text-bold">Información Fichas Técnicas</legend>
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Monto a Invertir <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+										<label class="control-label col-lg-3">Plazo Estimado <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<div class="input-group-addon">Meses</div>
+												<input type="text" name="digits" class="form-control" required="required" placeholder="" aria-required="true">
+											</div>
+										</div>
+									</div>	
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Total de Participaciones <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+                                    </div>
+                                    
+									<div class="form-group">
+										<label class="control-label col-lg-3">Participaciones Vendidas <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="0">
+										</div>
+                                    </div>
+									
+									
+									
+									
+									
+									
+									<!-- Fichas Tecnicas -->
+									<legend class="text-bold">Estudio de Mercado</legend>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Costo Total <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
 									</div>
 									
-									<div class="tab-pane fade" id="gallery">
+									<div class="form-group">
+										<label class="control-label col-lg-3">Precio Estimado de Venta <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+                                    </div>
+
+									<div class="form-group">
+										<label class="control-label col-lg-3">Comisión por Venta <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-lg-3">Utilidad <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
+											</div>
+										</div>
+									</div>
+                                
+                                    <div class="form-group">
+										<label class="control-label col-lg-3">Tiempo Estimado <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<div class="input-group-addon">Meses</div>
+												<input type="text" name="digits" class="form-control" required="required" placeholder="" aria-required="true">
+											</div>
+										</div>
+									</div>
+                                
+									<div class="form-group">
+										<label class="control-label col-lg-3">Rendimiento en Tiempo Estimado <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
+											</div>
+										</div>
+									</div>
+									
+                                
+									<div class="form-group">
+										<label class="control-label col-lg-3">Rendimiento Anualizado <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
+											</div>
+										</div>
+									</div>
 
 
-                                        <!-- Avance de Obra -->
-                                        <div class="panel panel-flat">
-                                            <div class="panel-heading">
-                                                <h5 class="panel-title">Agregar Avance de Obra</h5>
-                                                <div class="heading-elements">
-                                                    <ul class="icons-list">
-                                                        <li><a data-action="collapse"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                    <!-- Objetivo, Rendimiento y Utilidad -->
+									<legend class="text-bold">Datos Fijos</legend>									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Objetivo de Captación <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Rendimiento Anual Estimado <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
+											</div>
+										</div>
+									</div>
 
-                                            <div class="panel-body">
-                                                <form action="#">
-                                                    <div class="form-group">
-                                                      <div class="row">
-                                                           <div class="col-md-6">
-                                                                 <label class="control-label">Descripción del Avance <span class="text-danger">*</span></label>
-                                                                 <textarea rows="5" cols="5" name="textarea" class="form-control" required="required" placeholder=""></textarea>
-                                                            </div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Utilidad Esperada <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<input type="text" name="touchspin" value="" required="required" class="touchspin-postfix" placeholder="Not valid if empty">
+											</div>
+										</div>
+									</div>
 
-                                                            <div class="col-md-6">
-                                                                 <label class="display-block">Subir Imagen de Avance <span class="text-danger">*</span></label>
-                                                                 <input type="file" class="file-styled" required="required">
-                                                                  <span class="help-block">Formatos aceptados: gif, png, jpg. Tamaño Max: 2Mb</span>
-                                                             </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <div class="form-group">
-                                                                <div class="row">															
-                                                                    <div class="col-md-6">
-                                                                        <label>Mes <span class="text-danger">*</span></label>
-                                                                        <select class="select" required="required">
-                                                                            <option value="na" selected="">Elige</option>
-                                                                            <option value="enero">Enero</option>
-                                                                            <option value="febrero">Febrero</option>
-                                                                            <option value="marzo">Marzo</option>
-                                                                            <option value="abril">Abril</option>
-                                                                            <option value="mayo">Mayo</option>
-                                                                            <option value="junio">Junio</option>
-                                                                            <option value="julio">Julio</option>
-                                                                            <option value="agosto">Agosto</option>
-                                                                            <option value="septiembre">Septiembre</option>
-                                                                            <option value="actubre">Octubre</option>
-                                                                            <option value="noviembre">Noviembre</option>
-                                                                            <option value="diciembre">Diciembre</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <label>Año <span class="text-danger">*</span></label>
-                                                                        <select class="select" required="required">
-                                                                            <option value="" selected="">Elige</option>
-                                                                            <option value="">2015</option>
-                                                                            <option value="">2016</option>
-                                                                            <option value="">2017</option>
-                                                                            <option value="">2018</option>
-                                                                            <option value="">2019</option>
-                                                                            <option value="">2020</option>
-                                                                            <option value="">2021</option>
-                                                                            <option value="">2022</option>
-                                                                            <option value="">2023</option>
-                                                                            <option value="">2024</option>
-                                                                            <option value="">2025</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>                    
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="text-right">
-                                                        <button type="submit" class="btn btn-primary">Crear Avance <i class="icon-arrow-right14 position-right"></i></button>
-                                                    </div>
-                                                </form>							
-                                            </div>
-                                        </div>
-
-                                        <!-- Media library -->
-                                        <div class="panel panel-white">
-                                            <div class="panel-heading">
-                                                <h6 class="panel-title text-semibold">Avances de Obra</h6>
-                                            </div>
-
-                                            <table class="table table-striped media-library table-lg">
-                                                <thead>
-                                                    <tr>
-                                                        <th><input type="checkbox" class="styled"></th>
-                                                        <th>Imagen</th>
-                                                        <th>Descripción</th>
-                                                        <th>Mes</th>
-                                                        <th>Año</th>
-                                                        <th>Info Archivo</th>
-                                                        <th class="text-center">Opciones</th>
-                                                    </tr>
-                                                </thead>
+								
+                                    <!-- Datos Extra -->
+									<legend class="text-bold">Corrida Financiera</legend>	
+									<div class="form-group">
+										<div class="col-lg-12">
+                                            <table id="table1" class="table table-bordered">
                                                 <tbody>
                                                     <tr>
-                                                        <td><input type="checkbox" class="styled"></td>
-                                                        <td>
-                                                            <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                                                                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
-                                                            </a>
-                                                        </td>
-                                                        <td><p>Ignorant saw her drawings</p></td>
-                                                        <td><p>Marzo</p></td>
-                                                        <td><p>2015</p></td>
-                                                        <td>
-                                                            <ul class="list-condensed list-unstyled no-margin">					                        		
-                                                                <li><span class="text-semibold">Size:</span> 215 Kb</li>
-                                                                <li><span class="text-semibold">Format:</span> .jpg</li>
-                                                            </ul>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <ul class="icons-list">
-                                                                <li class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                        <i class="icon-menu9"></i>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                                        <li><a href="#"><i class="icon-pencil7"></i> Editar</a></li>
-                                                                        <li class="divider"></li>
-                                                                        <li><a href="#"><i class="icon-bin"></i> Eliminar</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td><input type="checkbox" class="styled"></td>
-                                                        <td>
-                                                            <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                                                                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
-                                                            </a>
-                                                        </td>
-                                                        <td><p>Ignorant saw her drawings</p></td>
-                                                        <td><p>Marzo</p></td>
-                                                        <td><p>2015</p></td>
-                                                        <td>
-                                                            <ul class="list-condensed list-unstyled no-margin">					                        		
-                                                                <li><span class="text-semibold">Size:</span> 215 Kb</li>
-                                                                <li><span class="text-semibold">Format:</span> .jpg</li>
-                                                            </ul>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <ul class="icons-list">
-                                                                <li class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                        <i class="icon-menu9"></i>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                                        <li><a href="#"><i class="icon-pencil7"></i> Editar</a></li>
-                                                                        <li class="divider"></li>
-                                                                        <li><a href="#"><i class="icon-bin"></i> Eliminar</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td><input type="checkbox" class="styled"></td>
-                                                        <td>
-                                                            <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                                                                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
-                                                            </a>
-                                                        </td>
-                                                        <td><p>Ignorant saw her drawings</p></td>
-                                                        <td><p>Marzo</p></td>
-                                                        <td><p>2015</p></td>
-                                                        <td>
-                                                            <ul class="list-condensed list-unstyled no-margin">					                        		
-                                                                <li><span class="text-semibold">Size:</span> 215 Kb</li>
-                                                                <li><span class="text-semibold">Format:</span> .jpg</li>
-                                                            </ul>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <ul class="icons-list">
-                                                                <li class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                        <i class="icon-menu9"></i>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                                        <li><a href="#"><i class="icon-pencil7"></i> Editar</a></li>
-                                                                        <li class="divider"></li>
-                                                                        <li><a href="#"><i class="icon-bin"></i> Eliminar</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td><input type="checkbox" class="styled"></td>
-                                                        <td>
-                                                            <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                                                                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
-                                                            </a>
-                                                        </td>
-                                                        <td><p>Ignorant saw her drawings</p></td>
-                                                        <td><p>Marzo</p></td>
-                                                        <td><p>2015</p></td>
-                                                        <td>
-                                                            <ul class="list-condensed list-unstyled no-margin">					                        		
-                                                                <li><span class="text-semibold">Size:</span> 215 Kb</li>
-                                                                <li><span class="text-semibold">Format:</span> .jpg</li>
-                                                            </ul>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <ul class="icons-list">
-                                                                <li class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                        <i class="icon-menu9"></i>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                                        <li><a href="#"><i class="icon-pencil7"></i> Editar</a></li>
-                                                                        <li class="divider"></li>
-                                                                        <li><a href="#"><i class="icon-bin"></i> Eliminar</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td><input type="checkbox" class="styled"></td>
-                                                        <td>
-                                                            <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                                                                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
-                                                            </a>
-                                                        </td>
-                                                        <td><p>Ignorant saw her drawings</p></td>
-                                                        <td><p>Marzo</p></td>
-                                                        <td><p>2015</p></td>
-                                                        <td>
-                                                            <ul class="list-condensed list-unstyled no-margin">					                        		
-                                                                <li><span class="text-semibold">Size:</span> 215 Kb</li>
-                                                                <li><span class="text-semibold">Format:</span> .jpg</li>
-                                                            </ul>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <ul class="icons-list">
-                                                                <li class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                        <i class="icon-menu9"></i>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                                        <li><a href="#"><i class="icon-pencil7"></i> Editar</a></li>
-                                                                        <li class="divider"></li>
-                                                                        <li><a href="#"><i class="icon-bin"></i> Eliminar</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td><input type="checkbox" class="styled"></td>
-                                                        <td>
-                                                            <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                                                                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
-                                                            </a>
-                                                        </td>
-                                                        <td><p>Ignorant saw her drawings</p></td>
-                                                        <td><p>Marzo</p></td>
-                                                        <td><p>2015</p></td>
-                                                        <td>
-                                                            <ul class="list-condensed list-unstyled no-margin">					                        		
-                                                                <li><span class="text-semibold">Size:</span> 215 Kb</li>
-                                                                <li><span class="text-semibold">Format:</span> .jpg</li>
-                                                            </ul>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <ul class="icons-list">
-                                                                <li class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                        <i class="icon-menu9"></i>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                                        <li><a href="#"><i class="icon-pencil7"></i> Editar</a></li>
-                                                                        <li class="divider"></li>
-                                                                        <li><a href="#"><i class="icon-bin"></i> Eliminar</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td><input type="checkbox" class="styled"></td>
-                                                        <td>
-                                                            <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                                                                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
-                                                            </a>
-                                                        </td>
-                                                        <td><p>Ignorant saw her drawings</p></td>
-                                                        <td><p>Marzo</p></td>
-                                                        <td><p>2015</p></td>
-                                                        <td>
-                                                            <ul class="list-condensed list-unstyled no-margin">					                        		
-                                                                <li><span class="text-semibold">Size:</span> 215 Kb</li>
-                                                                <li><span class="text-semibold">Format:</span> .jpg</li>
-                                                            </ul>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <ul class="icons-list">
-                                                                <li class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                        <i class="icon-menu9"></i>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                                        <li><a href="#"><i class="icon-pencil7"></i> Editar</a></li>
-                                                                        <li class="divider"></li>
-                                                                        <li><a href="#"><i class="icon-bin"></i> Eliminar</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td><input type="checkbox" class="styled"></td>
-                                                        <td>
-                                                            <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                                                                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
-                                                            </a>
-                                                        </td>
-                                                        <td><p>Ignorant saw her drawings</p></td>
-                                                        <td><p>Marzo</p></td>
-                                                        <td><p>2015</p></td>
-                                                        <td>
-                                                            <ul class="list-condensed list-unstyled no-margin">					                        		
-                                                                <li><span class="text-semibold">Size:</span> 215 Kb</li>
-                                                                <li><span class="text-semibold">Format:</span> .jpg</li>
-                                                            </ul>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <ul class="icons-list">
-                                                                <li class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                        <i class="icon-menu9"></i>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                                        <li><a href="#"><i class="icon-pencil7"></i> Editar</a></li>
-                                                                        <li class="divider"></li>
-                                                                        <li><a href="#"><i class="icon-bin"></i> Eliminar</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td><input type="checkbox" class="styled"></td>
-                                                        <td>
-                                                            <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                                                                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
-                                                            </a>
-                                                        </td>
-                                                        <td><p>Ignorant saw her drawings</p></td>
-                                                        <td><p>Marzo</p></td>
-                                                        <td><p>2015</p></td>
-                                                        <td>
-                                                            <ul class="list-condensed list-unstyled no-margin">					                        		
-                                                                <li><span class="text-semibold">Size:</span> 215 Kb</li>
-                                                                <li><span class="text-semibold">Format:</span> .jpg</li>
-                                                            </ul>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <ul class="icons-list">
-                                                                <li class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                        <i class="icon-menu9"></i>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                                        <li><a href="#"><i class="icon-pencil7"></i> Editar</a></li>
-                                                                        <li class="divider"></li>
-                                                                        <li><a href="#"><i class="icon-bin"></i> Eliminar</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td><input type="checkbox" class="styled"></td>
-                                                        <td>
-                                                            <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                                                                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
-                                                            </a>
-                                                        </td>
-                                                        <td><p>Ignorant saw her drawings</p></td>
-                                                        <td><p>Marzo</p></td>
-                                                        <td><p>2015</p></td>
-                                                        <td>
-                                                            <ul class="list-condensed list-unstyled no-margin">					                        		
-                                                                <li><span class="text-semibold">Size:</span> 215 Kb</li>
-                                                                <li><span class="text-semibold">Format:</span> .jpg</li>
-                                                            </ul>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <ul class="icons-list">
-                                                                <li class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                        <i class="icon-menu9"></i>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                                        <li><a href="#"><i class="icon-pencil7"></i> Editar</a></li>
-                                                                        <li class="divider"></li>
-                                                                        <li><a href="#"><i class="icon-bin"></i> Eliminar</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
+                                                        <td></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        </div>
-                                        <!-- /media library -->
+										</div>
+									</div>   
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+								
+                                    <!-- Datos Extra -->
+									<legend class="text-bold">Datos Complementarios</legend>	
+									<div class="form-group">
+										<div class="col-lg-12">
+                                            <table id="table2" class="table table-bordered">
+                                                <tbody>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+										</div>
+									</div>                        
+                                            
 
-									</div>
-									
+								</fieldset>
+
+								<div class="text-right">
+									<button type="submit" class="btn btn-primary">Editar Propiedad <i class="icon-arrow-right14 position-right"></i></button>
 								</div>
-							</div>
-						</div>		
+							</form>
+						</div>
 					</div>
-					<!-- /user profile -->
-
+					<!-- /form validation -->
 
 
 					<!-- Footer -->
 					<div class="footer text-muted">
-						&copy; 2017. <a href="#">Inverspot.</a> Powered by <a href="#" target="_blank">Cuántico</a>
+						&copy; 2017. <a href="#">Inverspot.</a> Powered by <a href="#" target="_blank">BSTT</a>
 					</div>
 					<!-- /footer -->
-
-
 				</div>
 				<!-- /content area -->
 
-        
 			</div>
 			<!-- /main content -->
 
@@ -921,24 +509,50 @@
 
 	</div>
 	<!-- /page container -->
-	
-    <script>
-        $(document).ready(function(){
-              var i=1;
-             $("#add_row").click(function(){
-              $('#addr'+i).html("<td><input name='costdept"+i+"' type='text' placeholder='' class='form-control input-md'  /> </td><td><input name='sellprice"+i+"' type='text' placeholder='' class='form-control input-md'  /> </td><td><input  name='commissionsell"+i+"' type='text' placeholder=''  class='form-control input-md'></td><td><input  name='utility"+i+"' type='text' placeholder=''  class='form-control input-md'></td>");
 
-              $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
-              i++; 
-          });
-             $("#delete_row").click(function(){
-                 if(i>1){
-                 $("#addr"+(i-1)).html('');
-                 i--;
-                 }
-             });
+		<script>
+		var table1, table2;
+			$(function() {
+				// Create editor
+				$('#table1, #table2').tableEditor({
+					//lang: 'es',
+					onChange: function(value, cell, table, tableEditor) {
+						console.log(value, cell, table, tableEditor)
+					}
+				})
 
-        });
-    </script>
+				// Set JSON
+				$('#table1').tableEditor('json', [
+					['CORRIDA FINANCIERA','DATOS',],
+					['Costo Total','',],
+                    ['Precio Estimado de Venta','',],
+                    ['Comisión por Venta','',],
+                    ['Utilidad','',],
+                    ['Rendimiento en 18 Meses','',],
+                    ['Rendimiento Anualizado','',]
+				])
+                
+				$('#table2').tableEditor('json', [
+					['Título de Columna','Título de Columna',],
+					['Celda 1','Celda 2',]
+				])
+
+				// Get JSON
+				$('#json').on('click', function() {
+					console.log('Table #1 JSON:', $('#table1').tableEditor('json'))
+					console.log('Table #2 JSON:', $('#table2').tableEditor('json'))
+				})
+			})
+		</script>
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+();
+
+</script>
 </body>
 </html>

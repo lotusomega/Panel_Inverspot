@@ -143,7 +143,7 @@
 									<a href="#"><i class="icon-stack"></i> <span>Inversores</span></a>
 									<ul>
 										<li><a href="inversores.html">Todos los Inversores</a></li>
-										<li><a href="#">Añadir Nueva Inversion</a></li>
+										<li><a href="agregar_inversor.html">Añadir Nueva Inversion</a></li>
 									</ul>
 								</li>
 								<li>
@@ -208,7 +208,8 @@
 
 					<div class="navbar-collapse collapse" id="navbar-filter">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#settings" data-toggle="tab"><i class="icon-cog3 position-left"></i> Opciones</a></li>
+							<li class="active"><a href="#user" data-toggle="tab"><i class="icon-cog3 position-left"></i> Información de Perfil</a></li>
+							<li><a href="#inversor" data-toggle="tab"><i class="icon-user position-left"></i>Información de Inversor</a></li>
 						</ul>
 					</div>
 				</div>
@@ -223,7 +224,8 @@
 						<div class="col-lg-12">
 							<div class="tabbable">
 								<div class="tab-content">
-									<div class="tab-pane fade in active" id="settings">
+								
+									<div class="tab-pane fade in active" id="user">
 
 										<!-- Profile info -->
 										<div class="panel panel-flat">
@@ -329,6 +331,334 @@
 										</div>
 										<!-- /profile info -->
 									</div>
+									
+									<div class="tab-pane fade" id="inversor">
+
+										<!-- Profile info -->
+										<div class="panel panel-flat">
+											<div class="panel-heading">
+												<h6 class="panel-title">Información de Inversor</h6>
+											</div>
+
+											<div class="panel-body">
+                                                <form class="form-horizontal" style="margin: 20px;">
+                                                    <fieldset>
+            
+                                                        <legend>1. Datos generales del inversionista</legend>
+
+                                                        <!-- Text input-->
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="selectbasic">Sexo</label>
+                                                          <div class="col-md-4">
+                                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                                              <option value="None">Seleccione...</option>
+                                                              <option value="Masculino">Masculino</option>
+                                                              <option value="Femenino">Femenino</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Nacionalidad</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-nacionalidad" name="your-nacionalidad" placeholder="Nacionalidad" class="form-control input-md" required="" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Ciudad de Nacimiento</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-nacimiento" name="your-nacimiento" placeholder="Lugar de nacimiento" class="form-control input-md" required="" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Número de Identificación</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-id" name="your-id" placeholder="Número de identificación" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>        
+
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="selectbasic">Tipo de identificación</label>
+                                                          <div class="col-md-4">
+                                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                                              <option value="None">Seleccione...</option>
+                                                              <option value="Masculino">Credencial de Elector</option>
+                                                              <option value="Femenino">Pasaporte</option>
+                                                              <option value="Femenino">Cartilla Militar</option>
+                                                              <option value="Femenino">Licencia de Conducir</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Clave Única de Registro de Población (CURP)</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-curp" name="your-curp" placeholder="CURP" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>   
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">RFC</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-rfc" name="your-rfc" placeholder="RFC" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>                                                                                                         
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Domicilio</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-domicilio" name="your-domicilio" placeholder="Calle y Número" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Colonia</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-colonia" name="your-colonia" placeholder="Colonia" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Delegación o Municipio</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-delomuni" name="your-delomuni" placeholder="Delegación o Municipio" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Ciudad o Población</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-cd" name="your-cd" placeholder="Ciudad o Población" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">País</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-pais" name="your-pais" placeholder="País" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Código Postal</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-cp" name="your-cp" placeholder="Código Postal" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="selectbasic">Estado Civíl</label>
+                                                          <div class="col-md-4">
+                                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                                              <option value="None">Seleccione...</option>
+                                                              <option value="Masculino">Soltero/a</option>
+                                                              <option value="Femenino">Comprometido/a</option>
+                                                              <option value="Femenino">Casado/a</option>
+                                                              <option value="Femenino">Divorciado/a</option>
+                                                              <option value="Femenino">Viudo/a</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="selectbasic">En caso de ser casado/a (Bajo que régimen):</label>
+                                                          <div class="col-md-4">
+                                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                                              <option value="None">Seleccione...</option>
+                                                              <option value="Masculino">Separación de Bienes</option>
+                                                              <option value="Femenino">Bienes Mancomunados</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Nombre Completo del/la Conyugue:</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-conyugue" name="your-conyugue" placeholder="Nombre Completo" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="your-correo">Correo Electrónico</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-correo" name="your-correo" placeholder="ejemplo@correo.com" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="contactofijo">Teléfono Fijo</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="contactofijo" name="contactofijo" placeholder="(xxx) xxx-xxxx" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <legend>2. Forma de inversión</legend>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="selectbasic">Forma de Pago</label>
+                                                          <div class="col-md-4">
+                                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                                              <option value="None">Seleccione...</option>
+                                                              <option value="Masculino">Efectivo</option>
+                                                              <option value="Femenino">Cheque</option>
+                                                              <option value="Femenino">Transferencia</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="selectbasic">Forma de Anticipo</label>
+                                                          <div class="col-md-4">
+                                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                                              <option value="None">Seleccione...</option>
+                                                              <option value="Masculino">Financiado</option>
+                                                              <option value="Femenino">Contado</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+
+
+                                                        <legend>3. Datos bancarios del inversionista</legend>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Número de Cuenta de Depósito</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-deposito" name="your-deposito" placeholder="Número de Cuenta" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Clave</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-clave" name="your-clave" placeholder="Clave" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Banco</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-banco" name="your-banco" placeholder="Nombre del Banco" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="">Titular de la Cuenta</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-titnombre" name="your-titnombre" placeholder="Nombre Completo" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+
+                                                        <legend>4. Designación de beneficiarios</legend>
+                                                        <h3 class="text-center">Beneficiario I</h3>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="your-biname">Nombre*</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-biname" name="your-name" placeholder="Nombre" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="your-bipaterno">Apellido Paterno*</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-bipaterno" name="your-bipaterno" placeholder="Apellido Paterno" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="your-bipaterno">Apellido Materno*</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-bimaterno" name="your-bimaterno" placeholder="Apellido Materno" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="contactofijo">Teléfono Fijo</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="contactofijo" name="contactofijo" placeholder="(xxx) xxx-xxxx" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="contactocel">Teléfono Celular</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="contactocel" name="contactocel" placeholder="(xxx) xxx-xxxx" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="your-biporcentaje">% del Beneficiario</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-biporcentaje" name="your-biporcentaje" placeholder="Cantidad de Porcentaje" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <h3 class="text-center">Beneficiario II</h3>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="your-biiname">Nombre*</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-biiname" name="your-biiname" placeholder="Nombre" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="your-biipaterno">Apellido Paterno*</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-biipaterno" name="your-biipaterno" placeholder="Apellido Paterno" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="your-biipaterno">Apellido Materno*</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-biimaterno" name="your-biimaterno" placeholder="Apellido Materno" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="contactofijoii">Teléfono Fijo</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="contactofijoii" name="contactofijoii" placeholder="(xxx) xxx-xxxx" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="contactocelii">Teléfono Celular</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="contactocelii" name="contactocelii" placeholder="(xxx) xxx-xxxx" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div> 
+
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="your-biiporcentaje">% del Beneficiario</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="your-biiporcentaje" name="your-biiporcentaje" placeholder="Cantidad de Porcentaje" class="form-control input-md" required="true" type="text">
+                                                          </div>
+                                                        </div>
+
+                                                        <br><br>
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="textarea">Comentarios Adicionales</label>
+                                                          <div class="col-md-4">                     
+                                                            <textarea class="form-control" id="textarea" name="textarea"></textarea>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="text-right">
+                                                            <button type="submit" class="btn btn-primary">Editar Usuario <i class="icon-arrow-right14 position-right"></i></button>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                        </div>
+                                        </div>
+                                    </div>
+					
 								</div>
 							</div>
 						</div>
@@ -342,7 +672,7 @@
 
 					<!-- Footer -->
 					<div class="footer text-muted">
-						&copy; 2017. <a href="#">Inverspot.</a> Powered by <a href="#" target="_blank">Cuántico</a>
+						&copy; 2017. <a href="#">Inverspot.</a> Powered by <a href="#" target="_blank">BSTT</a>
 					</div>
 					<!-- /footer -->
 
