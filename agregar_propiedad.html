@@ -33,7 +33,20 @@
 
 	<script type="text/javascript" src="assets/js/core/app.js"></script>
 	<script type="text/javascript" src="assets/js/pages/form_validation.js"></script>
-	<!-- /theme JS files -->
+
+	<script type="text/javascript" src="assets/js/plugins/notifications/jgrowl.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/anytime.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/legacy.js"></script>
+
+	<script type="text/javascript" src="assets/js/pages/picker_date.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+	<!-- /theme JS files -->    
+    
 
 </head>
 
@@ -42,7 +55,7 @@
 	<!-- Main navbar -->
 	<div class="navbar navbar-inverse bg-purple-600">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+			<a class="navbar-brand" href="propiedades.html"><img src="assets/images/logo_light.png" alt=""></a>
 
 			<ul class="nav navbar-nav visible-xs-block">
 				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -120,7 +133,6 @@
 
 								<!-- Main -->
 								<li class="navigation-header"><span>Panel Principal</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li><a href="index.html"><i class="icon-home4"></i> <span>Inicio</span></a></li>
 								<li>
 									<a href="#"><i class="icon-stack2"></i> <span>Administradores</span></a>
 									<ul>
@@ -150,13 +162,6 @@
 									</ul>
 								</li>
 								<li>
-									<a href="#"><i class="icon-pencil3"></i> <span>Asesores</span></a>
-									<ul>
-										<li><a href="asesores.html">Todos los Asesores</a></li>
-										<li><a href="agregar_asesor.html">Añadir Nuevo Asesor</a></li>
-									</ul>
-								</li>
-								<li>
 									<a href="#"><i class="icon-file-css"></i> <span>Desarrolladores</span></a>
 									<ul>
 										<li><a href="desarrolladores.html">Todos los Desarrolladores</a></li>
@@ -182,7 +187,7 @@
 				<div class="page-header page-header-default">
 					<div class="breadcrumb-line">
 						<ul class="breadcrumb">
-							<li><a href="index.html"><i class="icon-home2 position-left"></i> Panel Principal</a></li>
+							<li><a href="propiedades.html"><i class="icon-home2 position-left"></i> Panel Principal</a></li>
 							<li class="active">Agregar Nueva Propiedad</li>
 						</ul>
 
@@ -280,6 +285,21 @@
 											</div>
 										</div>
 									</div>
+                                    <div class="form-group">
+                                         <label class="control-label col-lg-3">Elegir el Desarrollador <span class="text-danger">*</span></label>
+                                         <div class="col-lg-9">
+                                             <select class="selectpicker" data-show-subtext="true" data-live-search="true" required="required">
+                                               <option data-subtext="Rep California">Tom Foolery</option>
+                                               <option data-subtext="Sen California">Bill Gordon</option>
+                                               <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                               <option data-subtext="Rep Alabama">Mario Flores</option>
+                                               <option data-subtext="Rep Alaska">Don Young</option>
+                                               <option data-subtext="Rep California" disabled="disabled">Marvin Martinez</option>
+                                             </select>
+										 </div>
+                                     </div>
+									
+									
 									
 									<!-- Fichas Tecnicas -->
 									<legend class="text-bold">Información Fichas Técnicas</legend>

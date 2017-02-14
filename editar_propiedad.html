@@ -48,7 +48,7 @@
 	<!-- Main navbar -->
 	<div class="navbar navbar-inverse bg-purple-600">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+			<a class="navbar-brand" href="propiedades.html"><img src="assets/images/logo_light.png" alt=""></a>
 
 			<ul class="nav navbar-nav visible-xs-block">
 				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -126,7 +126,6 @@
 
 								<!-- Main -->
 								<li class="navigation-header"><span>Panel Principal</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li><a href="index.html"><i class="icon-home4"></i> <span>Inicio</span></a></li>
 								<li>
 									<a href="#"><i class="icon-stack2"></i> <span>Administradores</span></a>
 									<ul>
@@ -156,13 +155,6 @@
 									</ul>
 								</li>
 								<li>
-									<a href="#"><i class="icon-pencil3"></i> <span>Asesores</span></a>
-									<ul>
-										<li><a href="asesores.html">Todos los Asesores</a></li>
-										<li><a href="agregar_asesor.html">Añadir Nuevo Asesor</a></li>
-									</ul>
-								</li>
-								<li>
 									<a href="#"><i class="icon-file-css"></i> <span>Desarrolladores</span></a>
 									<ul>
 										<li><a href="desarrolladores.html">Todos los Desarrolladores</a></li>
@@ -188,7 +180,7 @@
 				<div class="page-header page-header-default">
 					<div class="breadcrumb-line">
 						<ul class="breadcrumb">
-							<li><a href="index.html"><i class="icon-home2 position-left"></i> Panel Principal</a></li>
+							<li><a href="propiedades.html"><i class="icon-home2 position-left"></i> Panel Principal</a></li>
 							<li class="active">Editar Propiedad</li>
 						</ul>
 
@@ -482,31 +474,62 @@
                                             <div class="panel-body">
                                                 <form action="#">
                                                     <div class="form-group">
-                                                        <div class="row">
-                                                                                <div class="col-md-6">
-                                                                                    <label class="control-label">Descripción del Avance <span class="text-danger">*</span></label>
-                                                                                    <textarea rows="5" cols="5" name="textarea" class="form-control" required="required" placeholder=""></textarea>
-                                                                                </div>
+                                                      <div class="row">
+                                                           <div class="col-md-6">
+                                                                 <label class="control-label">Descripción del Avance <span class="text-danger">*</span></label>
+                                                                 <textarea rows="5" cols="5" name="textarea" class="form-control" required="required" placeholder=""></textarea>
+                                                            </div>
 
-                                                                                <div class="col-md-6">
-                                                                                    <label class="display-block">Subir Imagen de Avance <span class="text-danger">*</span></label>
-                                                                                    <input type="file" class="file-styled" required="required">
-                                                                                    <span class="help-block">Formatos aceptados: gif, png, jpg. Tamaño Max: 2Mb</span>
-                                                                                </div>
-                                                                            </div>
+                                                            <div class="col-md-6">
+                                                                 <label class="display-block">Subir Imagen de Avance <span class="text-danger">*</span></label>
+                                                                 <input type="file" class="file-styled" required="required">
+                                                                  <span class="help-block">Formatos aceptados: gif, png, jpg. Tamaño Max: 2Mb</span>
+                                                             </div>
+                                                        </div>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <div class="row">
-                                                                                <div class="col-md-6">
-                                                                                    <label class="control-label col-lg-3">Mes <span class="text-danger">*</span></label>
-                                                                                    <input type="text" placeholder="ejemplo: Enero" class="form-control" required="required" >
-                                                                                </div>
-                                                                                <div class="col-md-6">
-                                                                                    <label class="control-label col-lg-3">Año <span class="text-danger">*</span></label>
-                                                                                    <input type="text" name="digits" class="form-control" required="required" placeholder="ejemplo: 2016">
-                                                                                </div>
-                                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="row">															
+                                                                    <div class="col-md-6">
+                                                                        <label>Mes <span class="text-danger">*</span></label>
+                                                                        <select class="select" required="required">
+                                                                            <option value="na" selected="">Elige</option>
+                                                                            <option value="enero">Enero</option>
+                                                                            <option value="febrero">Febrero</option>
+                                                                            <option value="marzo">Marzo</option>
+                                                                            <option value="abril">Abril</option>
+                                                                            <option value="mayo">Mayo</option>
+                                                                            <option value="junio">Junio</option>
+                                                                            <option value="julio">Julio</option>
+                                                                            <option value="agosto">Agosto</option>
+                                                                            <option value="septiembre">Septiembre</option>
+                                                                            <option value="actubre">Octubre</option>
+                                                                            <option value="noviembre">Noviembre</option>
+                                                                            <option value="diciembre">Diciembre</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label>Año <span class="text-danger">*</span></label>
+                                                                        <select class="select" required="required">
+                                                                            <option value="" selected="">Elige</option>
+                                                                            <option value="">2015</option>
+                                                                            <option value="">2016</option>
+                                                                            <option value="">2017</option>
+                                                                            <option value="">2018</option>
+                                                                            <option value="">2019</option>
+                                                                            <option value="">2020</option>
+                                                                            <option value="">2021</option>
+                                                                            <option value="">2022</option>
+                                                                            <option value="">2023</option>
+                                                                            <option value="">2024</option>
+                                                                            <option value="">2025</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>                    
+                                                        </div>
                                                     </div>
 
                                                     <div class="text-right">
