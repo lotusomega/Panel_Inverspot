@@ -161,9 +161,6 @@
 										<li><a href="#">Añadir Nuevo Desarrollador</a></li>
 									</ul>
 								</li>
-								<li>
-									<a href="newsletter.html"><i class="icon-sphere"></i> <span>Newsletter</span></a>
-								</li>
 								<!-- /Main -->
 
 							</ul>
@@ -247,56 +244,53 @@
 													<div class="form-group">
 														<div class="row">
 															<div class="col-md-12">
-																<label>Nombre Completo</label>
-																<input type="text" value="" class="form-control">
+																<label>Nombre Completo <span class="text-danger">*</span></label>
+																<input type="text" value="" class="form-control" required="required">
 															</div>
 														</div>
 													</div>
-
+                                                
 													<div class="form-group">
 														<div class="row">
 															<div class="col-md-6">
-																<label>Correo electrónico (obligatorio)	</label>
-																<input type="text" value="" class="form-control">
+																<label>Correo electrónico <span class="text-danger">*</span></label>
+																<input type="email" name="email" class="form-control" id="email" required="required"  aria-required="true">
 															</div>
-															
-															<div class="col-md-6">
-																<label class="display-block">Subir Imagen de Perfil</label>
-							                                    <input type="file" class="file-styled">
-							                                    <span class="help-block">Formatos aceptados: gif, png, jpg. Tamaño Max: 2Mb</span>
-															</div>
-														</div>
-													</div>
-
-							                        <div class="form-group">
-							                        	<div class="row">
 							                        		<div class="col-md-6">
-																<label>Teléfono #</label>
-																<input type="text" value="" class="form-control">
+																<label>Teléfono #  <span class="text-danger">*</span></label>
+																<input type="text" value="" class="form-control" required="required">
 																<span class="help-block">999-999-99-99</span>
 							                        		</div>
-							                        	</div>
-							                        </div>
-
-													<div class="form-group">
-														<div class="row">
-															<div class="col-md-12">
-																<label>Nombre de usuario (obligatorio)</label>
-																<input type="text" value="" class="form-control">
-															</div>
 														</div>
 													</div>
 
 													<div class="form-group">
 														<div class="row">
 															<div class="col-md-6">
-																<label>Contraseña</label>
-																<input type="password" placeholder="" class="form-control">
+																<label>Nombre de usuario <span class="text-danger">*</span></label>
+																<input type="text" value="" class="form-control" required="required">
+															</div>
+                                                           <div class="col-md-6">
+                                                               <label class="control-label col-lg-3">Tipo de Usuario <span class="text-danger">*</span></label>
+                                                                <select name="default_select" class="form-control" required="required">
+                                                                    <option value="">Elige</option> 
+                                                                    <option value="admin">Administrador</option>
+                                                                    <option value="asesor">Asesor</option>
+                                                                </select>
+                                                            </div>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<div class="row">
+															<div class="col-md-6">
+																<label>Contraseña  <span class="text-danger">*</span></label>
+																<input type="password" placeholder="" class="form-control" required="required">
 															</div>
 
 															<div class="col-md-6">
-																<label>Repetir Contraseña</label>
-																<input type="password" placeholder="" class="form-control">
+																<label>Repetir Contraseña  <span class="text-danger">*</span></label>
+																<input type="password" placeholder="" class="form-control" required="required">
 															</div>
 														</div>
 													</div>

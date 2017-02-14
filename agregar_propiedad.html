@@ -160,11 +160,8 @@
 									<a href="#"><i class="icon-file-css"></i> <span>Desarrolladores</span></a>
 									<ul>
 										<li><a href="desarrolladores.html">Todos los Desarrolladores</a></li>
-										<li><a href="#">Añadir Nuevo Desarrollador</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="newsletter.html"><i class="icon-sphere"></i> <span>Newsletter</span></a>
+										<li><a href="agregar_desarrollador.html">Añadir Nuevo Desarrollador</a></li>
+                                    </ul>
 								</li>
 								<!-- /Main -->
 
@@ -227,13 +224,31 @@
 								    <!-- Informacion básica -->
 									<legend class="text-bold">Información Básica</legend>
 									<div class="form-group">
-										<label class="control-label col-lg-3">Nombre <span class="text-danger">*</span></label>
+										<label class="control-label col-lg-3">Título <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+                                    <div class="form-group">
+										<label class="control-label col-lg-3">Descripción del Proyecto <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<textarea rows="5" cols="5" name="textarea" class="form-control" required="required" placeholder="" aria-required="true"></textarea>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Imagen Principal del Proyecto <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="file" name="styled_file" class="file-styled"  multiple="multiple" required="required">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Calle <span class="text-danger">*</span></label>
 										<div class="col-lg-9">
 											<input type="text" name="basic" class="form-control" required="required" placeholder="">
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-lg-3">Direción <span class="text-danger">*</span></label>
+										<label class="control-label col-lg-3">Número <span class="text-danger">*</span></label>
 										<div class="col-lg-9">
 											<input type="text" name="basic" class="form-control" required="required" placeholder="">
 										</div>
@@ -244,7 +259,18 @@
 											<input type="text" name="basic" class="form-control" required="required" placeholder="">
 										</div>
 									</div>
-
+									<div class="form-group">
+										<label class="control-label col-lg-3">Ciudad <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-3">Código Postal <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="basic" class="form-control" required="required" placeholder="">
+										</div>
+									</div>
 									<div class="form-group has-feedback">
 										<label class="control-label col-lg-3">Coordenadas en el Mapa <span class="text-danger">*</span></label>
 										<div class="col-lg-9">
@@ -254,7 +280,49 @@
 											</div>
 										</div>
 									</div>
-
+									
+									<!-- Fichas Tecnicas -->
+									<legend class="text-bold">Información Fichas Técnicas</legend>
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Monto a Invertir <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+										<label class="control-label col-lg-3">Plazo Estimado <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<div class="input-group">
+												<div class="input-group-addon">Meses</div>
+												<input type="text" name="digits" class="form-control" required="required" placeholder="" aria-required="true">
+											</div>
+										</div>
+									</div>	
+									
+									<div class="form-group">
+										<label class="control-label col-lg-3">Total de Participaciones <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="">
+										</div>
+                                    </div>
+                                    
+									<div class="form-group">
+										<label class="control-label col-lg-3">Participaciones Vendidas <span class="text-danger">*</span></label>
+										<div class="col-lg-9">
+											<input type="text" name="digits" class="form-control" required="required" placeholder="0">
+										</div>
+                                    </div>
+									
+									
+									
+									
+									
+									
+									<!-- Fichas Tecnicas -->
+									<legend class="text-bold">Estudio de Mercado</legend>
+									
 									<div class="form-group">
 										<label class="control-label col-lg-3">Tipo de proyecto <span class="text-danger">*</span></label>
 										<div class="col-lg-9">
@@ -276,15 +344,11 @@
 										</div>
 									</div>
                                     
-									<div class="form-group">
-										<label class="control-label col-lg-3">Imagen Principal del Proyecto <span class="text-danger">*</span></label>
-										<div class="col-lg-9">
-											<input type="file" name="styled_file" class="file-styled"  multiple="multiple" required="required">
-										</div>
-									</div>
+
 
                                     <!-- Porcentajes -->
-									<legend class="text-bold">Porcentajes del Proyecto</legend>									
+									<legend class="text-bold">Porcentajes del Proyecto</legend>	
+					
 									<div class="form-group">
 										<label class="control-label col-lg-3">Costo Total <span class="text-danger">*</span></label>
 										<div class="col-lg-9">
@@ -293,7 +357,7 @@
 									</div>
 									
 									<div class="form-group">
-										<label class="control-label col-lg-3">Costo por Inversión <span class="text-danger">*</span></label>
+										<label class="control-label col-lg-3">Monto a Invertir <span class="text-danger">*</span></label>
 										<div class="col-lg-9">
 											<input type="text" name="digits" class="form-control" required="required" placeholder="">
 										</div>
@@ -332,12 +396,6 @@
 										</div>
 									</div>
 
-									<div class="form-group">
-										<label class="control-label col-lg-3">Monto a Invertir <span class="text-danger">*</span></label>
-										<div class="col-lg-9">
-											<input type="text" name="digits" class="form-control" required="required" placeholder="">
-										</div>
-									</div>
 									
 									<div class="form-group">
 										<label class="control-label col-lg-3">Forma de Pago <span class="text-danger">*</span></label>
